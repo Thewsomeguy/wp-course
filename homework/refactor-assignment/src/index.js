@@ -1,35 +1,35 @@
 'use strict';
 
-function a(b, c) {
-  if (b[0][0] == c && b[0][1] == c && b[0][2] == c) {
+function checkWin(board, player) {
+  if (board[0][0] == player && board[0][1] == player && board[0][2] == player) {
     return true;
   }
 
-  if (b[1][0] == c && b[1][1] == c && b[1][2] == c) {
+  if (board[1][0] == player && board[1][1] == player && board[1][2] == player) {
     return true;
   }
 
-  if (b[2][0] == c && b[2][1] == c && b[2][2] == c) {
+  if (board[2][0] == player && board[2][1] == player && board[2][2] == player) {
     return true;
   }
 
-  if (b[0][0] == c && b[1][0] == c && b[2][0] == c) {
+  if (board[0][0] == player && board[1][0] == player && board[2][0] == player) {
     return true;
   }
 
-  if (b[0][1] == c && b[1][1] == c && b[2][1] == c) {
+  if (board[0][1] == player && board[1][1] == player && board[2][1] == player) {
     return true;
   }
 
-  if (b[0][2] == c && b[1][2] == c && b[2][2] == c) {
+  if (board[0][2] == player && board[1][2] == player && board[2][2] == player) {
     return true;
   }
 
-  if (b[0][0] == c && b[1][1] == c && b[2][2] == c) {
+  if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
     return true;
   }
 
-  if (b[0][2] == c && b[1][1] == c && b[2][0] == c) {
+  if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
     return true;
   }
 
@@ -37,7 +37,7 @@ function a(b, c) {
 }
 
 console.log(
-  a(
+  checkWin(
     [
       [1, 1, 1],
       [0, 0, 0],
@@ -48,7 +48,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 0],
       [1, 1, 1],
@@ -59,7 +59,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 0],
       [0, 0, 0],
@@ -70,7 +70,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [1, 0, 0],
       [1, 0, 0],
@@ -81,7 +81,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 1, 0],
       [0, 1, 0],
@@ -92,7 +92,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 1],
       [0, 0, 1],
@@ -103,7 +103,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [1, 0, 0],
       [0, 1, 0],
@@ -114,7 +114,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 1],
       [0, 1, 0],
@@ -125,7 +125,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [2, 2, 2],
       [0, 0, 0],
@@ -136,7 +136,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 0],
       [2, 2, 2],
@@ -147,7 +147,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 0],
       [0, 0, 0],
@@ -158,7 +158,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [2, 0, 0],
       [2, 0, 0],
@@ -169,7 +169,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 2, 0],
       [0, 2, 0],
@@ -180,7 +180,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 2],
       [0, 0, 2],
@@ -191,7 +191,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [2, 0, 0],
       [0, 2, 0],
@@ -202,7 +202,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [0, 0, 2],
       [0, 2, 0],
@@ -213,7 +213,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [1, 2, 1],
       [1, 2, 2],
@@ -224,7 +224,7 @@ console.log(
 );
 
 console.log(
-  a(
+  checkWin(
     [
       [1, 2, 1],
       [1, 2, 2],
