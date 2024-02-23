@@ -6,23 +6,23 @@ const PLAYER_O = 2;
 
 function checkWin(board, player) {
   // Check rows
-  for (let i = 0; i < 3; i++) {
-    if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
+  for (let i = 0; i < 3; i += 1) {
+    if (board[i][0] === player && board[i][1] === player && board[i][2] === player) {
       return true;
     }
   }
 
   // Check columns
-  for (let i = 0; i < 3; i++) {
-    if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {
+  for (let i = 0; i < 3; i += 1) {
+    if (board[0][i] === player && board[1][i] === player && board[2][i] === player) {
       return true;
     }
   }
 
   // Check diagonals
   if (
-    (board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
-    (board[0][2] == player && board[1][1] == player && board[2][0] == player)
+    (board[0][0] === player && board[1][1] === player && board[2][2] === player) ||
+    (board[0][2] === player && board[1][1] === player && board[2][0] === player)
   ) {
     return true;
   }
@@ -30,6 +30,7 @@ function checkWin(board, player) {
   return false;
 }
 
+// Test cases
 console.log(
   checkWin(
     [

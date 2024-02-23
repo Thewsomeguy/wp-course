@@ -21,6 +21,7 @@ module.exports = {
     sourceType: 'commonjs',
   },
   rules: {
-    'global-strict': ['error', 'always'],
+    'strict': ['off', 'always'],
+    'no-console': ['off', 'always']
   },
 };
