@@ -1,5 +1,9 @@
 'use strict';
 
+const EMPTY = 0;
+const PLAYER_X = 1;
+const PLAYER_O = 2;
+
 function checkWin(board, player) {
   // Check rows
   for (let i = 0; i < 3; i++) {
@@ -29,197 +33,197 @@ function checkWin(board, player) {
 console.log(
   checkWin(
     [
-      [1, 1, 1],
-      [0, 0, 0],
-      [0, 0, 0],
+      [PLAYER_X, PLAYER_X, PLAYER_X],
+      [EMPTY, EMPTY, EMPTY],
+      [EMPTY, EMPTY, EMPTY],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 0],
-      [1, 1, 1],
-      [0, 0, 0],
+      [EMPTY, EMPTY, EMPTY],
+      [PLAYER_X, PLAYER_X, PLAYER_X],
+      [EMPTY, EMPTY, EMPTY],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 0],
-      [0, 0, 0],
-      [1, 1, 1],
+      [EMPTY, EMPTY, EMPTY],
+      [EMPTY, EMPTY, EMPTY],
+      [PLAYER_X, PLAYER_X, PLAYER_X],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [1, 0, 0],
-      [1, 0, 0],
-      [1, 0, 0],
+      [PLAYER_X, EMPTY, EMPTY],
+      [PLAYER_X, EMPTY, EMPTY],
+      [PLAYER_X, EMPTY, EMPTY],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 1, 0],
-      [0, 1, 0],
-      [0, 1, 0],
+      [EMPTY, PLAYER_X, EMPTY],
+      [EMPTY, PLAYER_X, EMPTY],
+      [EMPTY, PLAYER_X, EMPTY],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 1],
-      [0, 0, 1],
-      [0, 0, 1],
+      [EMPTY, EMPTY, PLAYER_X],
+      [EMPTY, EMPTY, PLAYER_X],
+      [EMPTY, EMPTY, PLAYER_X],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [1, 0, 0],
-      [0, 1, 0],
-      [0, 0, 1],
+      [PLAYER_X, EMPTY, EMPTY],
+      [EMPTY, PLAYER_X, EMPTY],
+      [EMPTY, EMPTY, PLAYER_X],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 1],
-      [0, 1, 0],
-      [1, 0, 0],
+      [EMPTY, EMPTY, PLAYER_X],
+      [EMPTY, PLAYER_X, EMPTY],
+      [PLAYER_X, EMPTY, EMPTY],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [2, 2, 2],
-      [0, 0, 0],
-      [0, 0, 0],
+      [PLAYER_O, PLAYER_O, PLAYER_O],
+      [EMPTY, EMPTY, EMPTY],
+      [EMPTY, EMPTY, EMPTY],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 0],
-      [2, 2, 2],
-      [0, 0, 0],
+      [EMPTY, EMPTY, EMPTY],
+      [PLAYER_O, PLAYER_O, PLAYER_O],
+      [EMPTY, EMPTY, EMPTY],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 0],
-      [0, 0, 0],
-      [2, 2, 2],
+      [EMPTY, EMPTY, EMPTY],
+      [EMPTY, EMPTY, EMPTY],
+      [PLAYER_O, PLAYER_O, PLAYER_O],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [2, 0, 0],
-      [2, 0, 0],
-      [2, 0, 0],
+      [PLAYER_O, EMPTY, EMPTY],
+      [PLAYER_O, EMPTY, EMPTY],
+      [PLAYER_O, EMPTY, EMPTY],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 2, 0],
-      [0, 2, 0],
-      [0, 2, 0],
+      [EMPTY, PLAYER_O, EMPTY],
+      [EMPTY, PLAYER_O, EMPTY],
+      [EMPTY, PLAYER_O, EMPTY],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 2],
-      [0, 0, 2],
-      [0, 0, 2],
+      [EMPTY, EMPTY, PLAYER_O],
+      [EMPTY, EMPTY, PLAYER_O],
+      [EMPTY, EMPTY, PLAYER_O],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [2, 0, 0],
-      [0, 2, 0],
-      [0, 0, 2],
+      [PLAYER_O, EMPTY, EMPTY],
+      [EMPTY, PLAYER_O, EMPTY],
+      [EMPTY, EMPTY, PLAYER_O],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [0, 0, 2],
-      [0, 2, 0],
-      [2, 0, 0],
+      [EMPTY, EMPTY, PLAYER_O],
+      [EMPTY, PLAYER_O, EMPTY],
+      [PLAYER_O, EMPTY, EMPTY],
     ],
-    2
+    PLAYER_O
   )
 );
 
 console.log(
   checkWin(
     [
-      [1, 2, 1],
-      [1, 2, 2],
-      [2, 1, 1],
+      [PLAYER_X, PLAYER_O, PLAYER_X],
+      [PLAYER_X, PLAYER_O, PLAYER_O],
+      [PLAYER_O, PLAYER_X, PLAYER_X],
     ],
-    1
+    PLAYER_X
   )
 );
 
 console.log(
   checkWin(
     [
-      [1, 2, 1],
-      [1, 2, 2],
-      [2, 1, 1],
+      [PLAYER_X, PLAYER_O, PLAYER_X],
+      [PLAYER_X, PLAYER_O, PLAYER_O],
+      [PLAYER_O, PLAYER_X, PLAYER_X],
     ],
-    2
+    PLAYER_O
   )
 );
